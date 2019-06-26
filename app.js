@@ -25,18 +25,24 @@ window.addEventListener('load',()=>{
         ctx.moveTo(e.clientX,e.clientY);
         
     }
+    
+    function erase(){
+        
 
+        ctx.clearRect(0,0,canvas.width,canvas.height);
+    }
 
+    //console.log("window width: "+ canvas.width+ "window height: "+canvas.height);
     canvas.addEventListener('mousedown',startPosition);
     canvas.addEventListener('mouseup',finishPosition);
     canvas.addEventListener('mousemove',draw);    
+    canvas.addEventListener('keydown',erase);
 });
 
 function resize()
 {
-    
     canvas.height=window.innerHeight;
-    canvas.width=window.innerWidth;
+    canvas.width= window.innerWidth;
 }
 
 window.addEventListener('resize',resize());
