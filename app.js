@@ -27,8 +27,6 @@ window.addEventListener('load',()=>{
     }
     
     function erase(){
-        
-
         ctx.clearRect(0,0,canvas.width,canvas.height);
     }
 
@@ -41,7 +39,7 @@ window.addEventListener('load',()=>{
 
 function resize()
 {
-    canvas.height=window.innerHeight;
+    canvas.height=0.9*(window.innerHeight);
     canvas.width= window.innerWidth;
 }
 
